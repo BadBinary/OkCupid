@@ -59,7 +59,7 @@ Replace the two example queries in the file with urls of your choice or delete o
 
 Your "filepath" must be a unique filepath it doesn't matter if it doesn't exist the list will be created for you. The "filterout" attribute is any userlist you want not to be a part of this list. This script automatically makes a list of users you've sent a message to already ("./Lists/SentAMessage.txt") so I would suggest putting in that list for "filterout" as well as any other list you may have running already.
 
-Once you are done editing your queries.json cd to the script ditrectory on your local machine run the following:
+Once you are done editing your queries.json cd to the cloned directory on your local machine run the following:
 
 ```Python
 python makelists.py
