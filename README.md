@@ -13,7 +13,7 @@ pip install requests
 pip install BeautifulSoup
 ```
 
-Once you have cloned the repo you must edit queries.json and replace the value for "queryurl" with a vaild match url from your account on okcupid.com. Simply login, click "Matches" in the sidebar and adjust the search critera to you liking. Then paste the url into your queries.json file.
+Once you have cloned the repo you must edit queries.json and replace the value for "queryurl" with a vaild match url from your account on okcupid.com. Simply login, click "Matches" in the sidebar and adjust the search critera to you liking. NOTE: for the time being you MUST set "Order by" to "Totally Random", this helps to get as many matches as possible, soon this will not be needed when this script is built out further. Paste the url into your queries.json file.
 Here is how a valid queries.json may look:
 
 ```json
