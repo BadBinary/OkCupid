@@ -30,7 +30,7 @@ Here is how a valid queries.json may look:
 ]
 ```
 
-Replace the two example queries in the file with urls of your choice or delete or add as many queries as you would like. NOTE: you MUST have a comma between multiple queries for it to be a valid json format. Like this:
+Replace the two example queries in the file with urls of your choice or delete or add as many queries as you would like. NOTE: you MUST have a comma between multiple queries for it to be in valid json format. Like this:
 
 ```json
 [
@@ -48,7 +48,7 @@ Replace the two example queries in the file with urls of your choice or delete o
         "name":  "Example",
         "queryurl":  "http://www.okcupid.com/",
         "filepath":  "./Lists/Example2.txt",
-        "id":  3,
+        "id":  2,
         "filterout":  [
                           "./Lists/SentAMessage.txt",
                           "./Lists/AlreadyMessagedBack.txt"
@@ -56,3 +56,8 @@ Replace the two example queries in the file with urls of your choice or delete o
     }
 ]
 ```
+
+Your "filepath" must be a unique filepath it doesn't matter if it doesn't exist the list will be created for you. The "filterout" attribute is any userlist you want not to be a part of this list. This script automatically makes a list of users you've sent a message to already ("./Lists/SentAMessage.txt") so I would suggest putting in that list for "filterout" as well as any other list you may have running already.
+
+Now in the folder "Messages" you must edit 1.txt to be your message you want to send out. Soon I will have the option for multiple random messages but for now 1.txt MUST be the filename.
+
