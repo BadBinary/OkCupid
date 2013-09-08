@@ -13,7 +13,7 @@
         "name":  "Example",
         "queryurl":  "http://www.okcupid.com/",
         "filepath":  "./Lists/Example2.txt",
-        "id":  3,
+        "id":  2,
         "filterout":  [
                           "./Lists/SentAMessage.txt",
                           "./Lists/AlreadyMessagedBack.txt"
