@@ -59,5 +59,23 @@ Replace the two example queries in the file with urls of your choice or delete o
 
 Your "filepath" must be a unique filepath it doesn't matter if it doesn't exist the list will be created for you. The "filterout" attribute is any userlist you want not to be a part of this list. This script automatically makes a list of users you've sent a message to already ("./Lists/SentAMessage.txt") so I would suggest putting in that list for "filterout" as well as any other list you may have running already.
 
+Once you are done editing your queries.json cd to the script ditrectory on your local machine run the following:
+
+```Python
+python makelists.py
+```
+
+This will create your lists of users to send messages to and serve as a way to update your lists when new users sign up. You may consider a scheduled task or cron job to update your lists for you.
+
 Now in the folder "Messages" you must edit 1.txt to be your message you want to send out. Soon I will have the option for multiple random messages but for now 1.txt MUST be the filename.
+
+To send messages run the following:
+
+```Python
+python automatemessages.py "./Lists/Default.txt" 100
+```
+
+The first argument is the path to the list you want to pull usernames from and the second argument is how many messages to send.
+So in the example above you would be sending 100 messages to users from the list "./Lists/Default.txt"
+
 
