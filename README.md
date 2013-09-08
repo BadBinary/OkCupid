@@ -41,7 +41,7 @@ Replace the two example queries in the file with urls of your choice or delete o
         "id":  1,
         "filterout":  [
                           "./Lists/SentAMessage.txt",
-                          "./Lists/AlreadyMessagedBack.txt"
+                          "./Lists/Example2.txt"
                       ]
     },
     {
@@ -51,7 +51,7 @@ Replace the two example queries in the file with urls of your choice or delete o
         "id":  2,
         "filterout":  [
                           "./Lists/SentAMessage.txt",
-                          "./Lists/AlreadyMessagedBack.txt"
+                          "./Lists/Example1.txt"
                       ]
     }
 ]
