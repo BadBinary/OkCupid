@@ -31,12 +31,15 @@ class OkCupid(object):
    			with open(filepath):
    				pass
 		except IOError:
-			login()
+			OkCupid.login()
 		cookiefile = open(filepath, 'r')
 		cookiestring = json.loads(cookiefile.read())
-		values = "session=" + cookiestring['session'].encode('utf-8') + "; authlink=" + cookiestring['authlink'].encode('utf-8')
-		OkCupid.cookietuple = ('Cookie', values)
-		OkCupid.cookiedict = {'Cookie' : values}
+		if (json.loads(test).keys()[0] == 'authlink') & (json.loads(test).keys()[1] == 'session'):
+			values = "session=" + cookiestring['session'].encode('utf-8') + "; authlink=" + cookiestring['authlink'].encode('utf-8')
+			OkCupid.cookietuple = ('Cookie', values)
+			OkCupid.cookiedict = {'Cookie' : values}
+		else:
+			OkCupid.login()
 
 	@staticmethod
 	def login():
@@ -47,6 +50,10 @@ class OkCupid(object):
 		loginopener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookiejar))
 		parameters = urllib.urlencode({'username' :  username, 'password' : password, 'dest' : '/?'})
 		loginrespon = loginopener.open(loginurl, parameters)
+		if 'guest' in requests.utils.dict_from_cookiejar(cookiejar).keys():
+			break
+			print "Login error re-enter your login creds"
+			OkCupid.login()
 		cookiejson = json.dumps(requests.utils.dict_from_cookiejar(cookiejar))
 		OkCupid.writejson('cookie.json', cookiejson)
 		OkCupid.loadcookie('cookie.json')
