@@ -29,7 +29,7 @@ Here is how a valid queries.json may look:
 ]
 ```
 
-Replace the two example queries in the file with urls of your choice or delete or add as many queries as you would like. NOTE: you MUST have a comma between multiple queries for it to be in valid json format. Like this:
+Replace the two example queries in the file with urls of your choice or delete or add as many queries as you would like. NOTE: you MUST have a comma between multiple queries (look at the comma after the "}" symbol below) for it to be in valid json format. Like this:
 
 ```json
 [
@@ -43,7 +43,7 @@ Replace the two example queries in the file with urls of your choice or delete o
                       ]
     },
     {
-        "name":  "Example",
+        "name":  "Example 2",
         "queryurl":  "http://www.okcupid.com/",
         "filepath":  "./Lists/Example2.txt",
         "filterout":  [
