@@ -35,7 +35,7 @@ Replace the two example queries in the file with urls of your choice or delete o
 [
     {
         "name":  "Example 1",
-        "queryurl":  "http://www.okcupid.com/",
+        "queryurl":  "http://www.okcupid.com/match?blah=blah&more-search-parameters-here",
         "filepath":  "./Lists/Example1.txt",
         "filterout":  [
                           "./Lists/SentAMessage.txt",
@@ -44,7 +44,7 @@ Replace the two example queries in the file with urls of your choice or delete o
     },
     {
         "name":  "Example 2",
-        "queryurl":  "http://www.okcupid.com/",
+        "queryurl":  "http://www.okcupid.com/match?blah=blah&then-some-more-search-parameters-here",
         "filepath":  "./Lists/Example2.txt",
         "filterout":  [
                           "./Lists/SentAMessage.txt",
