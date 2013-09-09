@@ -64,9 +64,8 @@ python makelists.py
 
 This will create your lists of users to send messages to and serve as a way to update your lists when new users sign up. You may consider a scheduled task or cron job to update your lists for you.
 
-Now in the folder "Messages" you must edit 1.txt to be your message you want to send out. Soon I will have the option for multiple random messages but for now 1.txt MUST be the filename.
-
-To send messages run the following:
+Now in the folder "Messages" you must add txt files to be your message(s) you want to send out. The filename does not matter. Place each message you want to use in an individual txt file of its own and the script will pick one of the messages at random to send out. If you have just one txt file it will send that message every time.
+To send your messages run the following:
 
 ```Python
 python automatemessages.py "./Lists/Default.txt" 100

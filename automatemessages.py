@@ -6,6 +6,7 @@ from BeautifulSoup import BeautifulSoup
 import urllib
 import urllib2
 import re
+import os
 from baseclass import OkCupid
 
 def loadlists():
@@ -37,13 +38,16 @@ def sendmessage(recipent, message, authcode):
 if  __name__ =='__main__':
 	listpath = str(sys.argv[1])
 	nummsgs = int(sys.argv[2])
-	loadlists()
-	choosen = random.sample(sendmsgsto, nummsgs)
-	msgtxt = open('./Messages/1.txt').read().encode('utf-8')
 	authcode = getauthcode()
-	for i in choosen:
-		sendmessage(i, msgtxt, authcode)
-		sendmsgsto.remove(i)
-		sentamessage.append(i)
+	loadlists()
+	choosenusers = random.sample(sendmsgsto, nummsgs)
+	messages = []
+	messagefiles = os.listdir("./Messages")
+	for filename in messagefiles:
+		messages.append(open("./Messages/" + filename).read().encode('utf-8'))
+	for user in choosenusers:
+		sendmessage(user, random.choice(messages), authcode)
+		sendmsgsto.remove(user)
+		sentamessage.append(user)
 		savelists()
 		loadlists()
