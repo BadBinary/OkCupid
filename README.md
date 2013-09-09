@@ -5,7 +5,7 @@ This script allows you to send multiple messages on OkCupid to random users
 
 ##Installation
 
-You must have python 2.7 and pip installed. 
+You must have python 2.7 and pip installed.  
 python - http://www.python.org/download/releases/2.7.5/  
 pip - https://pypi.python.org/pypi/pip  
 Use pip to install the following libraries:
