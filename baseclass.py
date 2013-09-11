@@ -51,7 +51,6 @@ class OkCupid(object):
 		parameters = urllib.urlencode({'username' :  username, 'password' : password, 'dest' : '/?'})
 		loginrespon = loginopener.open(loginurl, parameters)
 		if 'guest' in requests.utils.dict_from_cookiejar(cookiejar).keys():
-			break
 			print "Login error re-enter your login creds"
 			OkCupid.login()
 		cookiejson = json.dumps(requests.utils.dict_from_cookiejar(cookiejar))
