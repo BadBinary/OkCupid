@@ -34,7 +34,7 @@ class OkCupid(object):
 			OkCupid.login()
 		cookiefile = open(filepath, 'r')
 		cookiestring = json.loads(cookiefile.read())
-		if (json.loads(test).keys()[0] == 'authlink') & (json.loads(test).keys()[1] == 'session'):
+		if (cookiestring.keys()[0] == 'authlink') & (cookiestring.keys()[1] == 'session'):
 			values = "session=" + cookiestring['session'].encode('utf-8') + "; authlink=" + cookiestring['authlink'].encode('utf-8')
 			OkCupid.cookietuple = ('Cookie', values)
 			OkCupid.cookiedict = {'Cookie' : values}
