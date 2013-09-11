@@ -3,6 +3,7 @@
 import urllib2
 import json
 import os
+import re
 from BeautifulSoup import BeautifulSoup
 from baseclass import OkCupid
 
@@ -28,6 +29,10 @@ if  __name__ =='__main__':
 			print(query['name'].encode("utf-8") + ' List Count: ' + str(len(currentlist)))
 			matched = []
 			matchcount = 0
+			#url manipulation code
+			#currenturl = query['queryurl'].encode("utf-8")
+			#re.sub('timekey=[0-9]', '', url)
+			#&low=501&count=50
 			potentials = getpageusernames(query['queryurl'].encode("utf-8"))
 			for potential in potentials:
 				if potential in filterout:
